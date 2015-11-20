@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Name: <span id="name"></span>
+    <li>Age:  <span id="age"></span>
+    <li>City: <span id="city"></span>
+   </ul>
+    <script>
+     document.body.style.fontFamily = 'Arial, sans-serif';
+     document.getElementById('name').innerHTML = 'Niti';
+     document.getElementById('age').innerHTML = '26';
+     document.getElementById('city').innerHTML = 'Bangalore';
+     var items = document.getElementsByTagName('li');
+     for (var i = 0; i < items.length; i++) {
+      items[i].className = 'listitem';
+      }
+     var myPic = document.createElement('img');
+     myPic.src = "http://photos3.meetupstatic.com/photos/member/1/7/5/e/member_105125982.jpeg";
+     document.body.appendChild(myPic);
+
+    </script>  
+ </body>
+</html>
+
+  
