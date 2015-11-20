@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Books list</title>
+   </head>
+   <body>
+      <h1>My Books list</h1>
+         <script>
+            var books = [
+         {title: 'Insight Out',
+          author: 'Tina Seelig',
+          alreadyRead: false
+         },
+         {title: "Trust Me, I'm Lying",
+          author: 'Ryan Holiday',
+          alreadyRead: true
+        }];
+        var bookList = document.createElement('ul');
+        for (var i = 0; i < books.length; i++) {
+        var bookItem = document.createElement('li');
+        var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+        bookItem.appendChild(bookDescription);
+        if (books[i].alreadyRead) {
+          bookItem.style.color = 'grey';
+        }
+          bookList.appendChild(bookItem);
+        }
+        document.body.appendChild(bookList);
+        </script>
+
+    </body>
+</html>
+
